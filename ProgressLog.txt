@@ -1,1 +1,23 @@
-asdf
+# 19 June 2024
+- familiar with ST microprocessor families
+- determined current task
+- Useful YT: https://www.youtube.com/watch?v=rfBeq-Fu0hc
+- smaller half of the Nucleo is a built-in programmer (instead of needing to use a STM32CubeProgrammer)
+- Could use BluePill ST board instead of the Nucleo (is smaller + has less functionality - only has the procressor on it)
+- Identify minimum system config for the NFC
+
+Notes:
+STM32F = mainstream microcontroller
+STM32L = Low Power (power efficient)
+STM32H = High performance
+
+Dev Boards:
+Nucleo(-32, -64, -144) = corresponds to #pins on the baord
+BluePill = STM32F103C8T6
+- has arduino support (aka use Arduino IDE to program)
+- has only microcontroller on it, no extra bells/whistles
+
+ST32 Programming workflow: 
+1. STM32CubeMX = set initial config for registers
+2. STM32CubeIDE
+3. get code from IDE -> Microcontroller

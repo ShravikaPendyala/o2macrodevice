@@ -6,7 +6,9 @@ When: UROP for Summer of 2024
 
 19 June 2024
 
-Right now, the only code used to upload to the ST Nucleo is main.c located in (NUCLEO-L476RG/Applications/NFC08A1_PollingTagDetectNDEF/Src/main.c)
+Right now, the only code used to upload to the ST Nucleo is main.c located in 
+(NUCLEO-L476RG/Applications/NFC08A1_PollingTagDetectNDEF/Src/main.c)
+
 The NFC06A1 is not used anywhere
 
 Task: 

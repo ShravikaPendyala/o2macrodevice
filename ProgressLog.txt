@@ -1,3 +1,18 @@
+# 21 June 2024
+Notes:
+- Can use Nucleo-64 (L476RG) with Arduino Uno Rev3 (supposedly): question remains: can we use NFC with Arduino instead of with Nucleo
+- Can use Nucleo-32 with Arduino Nano (question remains as above)
+- Exists a configuration code setup in order to get the Nucleo board to only use muA of current
+- Can get MCU to draw .1 - 5 muA in "stop2" mode: https://community.st.com/t5/stm32-mcus-products/nucleo-stm32l412rb-p-how-to-measure-idd-only-through-stm32/td-p/142433
+- More details about which pins can be disabled for low-power modes: https://www.st.com/resource/en/reference_manual/rm0351-stm32l47xxx-stm32l48xxx-stm32l49xxx-and-stm32l4axxx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf
+- Code examples for low-power modes! https://forum.digikey.com/t/low-power-modes-on-the-stm32l0-series/13306
+
+ACTION PLAN: 
+- Try different low power modes to see if power can still be transferred to the NFC bc if this is the case, then take new Nucleo board with no previous solders (caps to GND, etc.) and program MCU into stop2 (or whichever low power mode) -> ensure that none of the caps/res remain necessary -> make breakout board with only the truly necessary connections
+- Measure current consumption of these low power modes (single digit micro amps or ~50 muA is acceptable: translates to 10-12 days of charging)
+- probe all minimum assembly pins to check signal + manipulate signal to test impact on output
+
+
 # 19 June 2024
 - familiar with ST microprocessor families
 - determined current task

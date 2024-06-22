@@ -1,3 +1,10 @@
+# 22 June 2024 - Edgerton Makerspace
+Notes:
+- There are some arduino libraries compatable with NFC reader: https://www.arduino.cc/reference/en/libraries/stm32duino-x-nucleo-nfc04a1/
+- useful for the future: https://store.particle.io/ : allows programming of the externam device completely remotely (no need to plug into microcontroller to reprogram it)
+- ESP32 highly suggested (edgerton Jonathan) to get started with bc it has buit in WiFi + Bluetooth capabilities
+- Instructable for programming Nucleo with Arduino IDE: https://www.instructables.com/Quick-Start-to-STM-Nucleo-on-Arduino-IDE/
+
 # 21 June 2024
 Notes:
 - Can use Nucleo-64 (L476RG) with Arduino Uno Rev3 (supposedly): question remains: can we use NFC with Arduino instead of with Nucleo

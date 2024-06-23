@@ -5,6 +5,7 @@
 - Got the TX to turn on!!! Currently takes 9mA (as shown in vid) + receiving antenna has ~.4V across resistor
 - Will try to cut down excess code that is being run + try low power modes
 - Maybe try this helloworld? https://github.com/stm32duino/X-NUCLEO-NFC08A1
+- Looks like just transmitting power requires 1mA? Need to continue looking
 
 # 22 June 2024 - Edgerton Makerspace
 Notes:

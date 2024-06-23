@@ -424,14 +424,12 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
   __HAL_RCC_GPIOD_CLK_ENABLE();
 
-  /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOC, LED_AP2P_Pin|LED_V_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, LED_F_Pin|LED_B_Pin|LED_FIELD_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA,LED_FIELD_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, LED_A_Pin|SPI1_CS_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, SPI1_CS_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin : B1_Pin */
   GPIO_InitStruct.Pin = B1_Pin;
@@ -439,22 +437,7 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(B1_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : LED_AP2P_Pin LED_V_Pin */
-  GPIO_InitStruct.Pin = LED_AP2P_Pin|LED_V_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PC2 PC3 PC4 PC5 
-                           PC6 PC7 PC8 PC9 
-                           PC10 PC11 PC12 */
-  GPIO_InitStruct.Pin = GPIO_PIN_2|GPIO_PIN_3|GPIO_PIN_4|GPIO_PIN_5 
-                          |GPIO_PIN_6|GPIO_PIN_7|GPIO_PIN_8|GPIO_PIN_9 
-                          |GPIO_PIN_10|GPIO_PIN_11|GPIO_PIN_12;
-  GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
   /*Configure GPIO pin : ST25R_IRQ_Pin */
   GPIO_InitStruct.Pin = ST25R_IRQ_Pin;
@@ -462,15 +445,15 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(ST25R_IRQ_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : LED_F_Pin LED_B_Pin LED_FIELD_Pin */
-  GPIO_InitStruct.Pin = LED_F_Pin|LED_B_Pin|LED_FIELD_Pin;
+  /*Configure GPIO pins : LED_FIELD_Pin */
+  GPIO_InitStruct.Pin = LED_FIELD_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : LED_A_Pin SPI1_CS_Pin */
-  GPIO_InitStruct.Pin = LED_A_Pin|SPI1_CS_Pin;
+  /*Configure GPIO pins : SPI1_CS_Pin */ // NEED SPI_1 PIN! maybe either SPI OR I2C to transmit?
+  GPIO_InitStruct.Pin = SPI1_CS_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -480,31 +463,11 @@ static void MX_GPIO_Init(void)
                            PB12 PB13 PB14 PB15 
                            PB4 PB5 PB7 PB8 
                            PB9 */
-  GPIO_InitStruct.Pin = GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_10|GPIO_PIN_11 
-                          |GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_14|GPIO_PIN_15 
-                          |GPIO_PIN_4|GPIO_PIN_5|GPIO_PIN_7|GPIO_PIN_8 
-                          |GPIO_PIN_9;
+  GPIO_InitStruct.Pin = GPIO_PIN_7;
   GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PA9 PA10 PA11 PA12 
-                           PA15 */
-  GPIO_InitStruct.Pin = GPIO_PIN_9|GPIO_PIN_10|GPIO_PIN_11|GPIO_PIN_12 
-                          |GPIO_PIN_15;
-  GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-
-  /*Configure GPIO pin : PD2 */
-  GPIO_InitStruct.Pin = GPIO_PIN_2;
-  GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
-
-  /* EXTI interrupt init*/
-  HAL_NVIC_SetPriority(EXTI0_IRQn, 1, 0);
-  HAL_NVIC_EnableIRQ(EXTI0_IRQn);
 }
 
 /* USER CODE BEGIN 4 */
@@ -526,52 +489,10 @@ void Error_Handler(void)
   /* User can add his own implementation to report the HAL error return state */
   while (1)
   {
-      platformLedToggle( PLATFORM_LED_FIELD_PORT, PLATFORM_LED_FIELD_PIN );
-      platformLedToggle( PLATFORM_LED_A_PORT, PLATFORM_LED_A_PIN );
-      platformLedToggle( PLATFORM_LED_B_PORT, PLATFORM_LED_B_PIN );
-      platformLedToggle( PLATFORM_LED_F_PORT, PLATFORM_LED_F_PIN );
-      platformLedToggle( PLATFORM_LED_V_PORT, PLATFORM_LED_V_PIN );
-      platformLedToggle( PLATFORM_LED_AP2P_PORT, PLATFORM_LED_AP2P_PIN );
+	  HAL_GPIO_WritePin(PLATFORM_LED_A_PORT, PLATFORM_LED_A_PIN, 1);
+
       platformDelay(100);
   }
   /* USER CODE END Error_Handler_Debug */
 }
 
-#ifdef USE_FULL_ASSERT
-/**
-  *****************************************************************************
-  * @brief  Reports the name of the source file and the source line number
-  *         where the assert_param error has occurred.
-  *
-  * @param[in]  file: pointer to the source file name
-  * @param[in]  line: assert_param error line source number
-  *
-  * @return None
-  *****************************************************************************
-  */
-void assert_failed(uint8_t* file, uint32_t line)
-{
-  /* USER CODE BEGIN 6 */
-  /* User can add his own implementation to report the file name and line number,
-     ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
-  /* USER CODE END 6 */
-}
-#endif /* USE_FULL_ASSERT */
-
-/**
-  * @}
-  */
-
-/**
-  * @}
-  */
-
-/**
-  * @}
-  */
-
-/**
-  * @}
-  */
-
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

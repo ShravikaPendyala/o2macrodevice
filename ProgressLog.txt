@@ -4,6 +4,7 @@ Notes:
 - useful for the future: https://store.particle.io/ : allows programming of the externam device completely remotely (no need to plug into microcontroller to reprogram it)
 - ESP32 highly suggested (edgerton Jonathan) to get started with bc it has buit in WiFi + Bluetooth capabilities
 - Instructable for programming Nucleo with Arduino IDE: https://www.instructables.com/Quick-Start-to-STM-Nucleo-on-Arduino-IDE/
+- successful blinky LED!!! https://microdigisoft.com/getting-started-stm32cube-programmer-blink-led/
 
 # 21 June 2024
 Notes:

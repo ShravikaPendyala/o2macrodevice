@@ -1,3 +1,10 @@
+# 23 June 2024 - Edgerton Makerspace
+- Looking into low power modes and example code stuff
+- Tried to make the currently used main.c to work from my end but didnt work
+- Found new example code that blinks the transmitter: https://www.st.com/en/embedded-software/stsw-st25r-lib.html?dl=redirect
+- Got the TX to turn on!!! Currently takes 9mA (as shown in vid)
+- Will try to cut down excess code that is being run + try low power modes
+
 # 22 June 2024 - Edgerton Makerspace
 Notes:
 - There are some arduino libraries compatable with NFC reader: https://www.arduino.cc/reference/en/libraries/stm32duino-x-nucleo-nfc04a1/
@@ -5,6 +12,7 @@ Notes:
 - ESP32 highly suggested (edgerton Jonathan) to get started with bc it has buit in WiFi + Bluetooth capabilities
 - Instructable for programming Nucleo with Arduino IDE: https://www.instructables.com/Quick-Start-to-STM-Nucleo-on-Arduino-IDE/
 - successful blinky LED!!! https://microdigisoft.com/getting-started-stm32cube-programmer-blink-led/
+- ^ Video!!~
 
 # 21 June 2024
 Notes:

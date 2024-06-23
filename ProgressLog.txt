@@ -2,8 +2,9 @@
 - Looking into low power modes and example code stuff
 - Tried to make the currently used main.c to work from my end but didnt work
 - Found new example code that blinks the transmitter: https://www.st.com/en/embedded-software/stsw-st25r-lib.html?dl=redirect
-- Got the TX to turn on!!! Currently takes 9mA (as shown in vid)
+- Got the TX to turn on!!! Currently takes 9mA (as shown in vid) + receiving antenna has ~.4V across resistor
 - Will try to cut down excess code that is being run + try low power modes
+- Maybe try this helloworld? https://github.com/stm32duino/X-NUCLEO-NFC08A1
 
 # 22 June 2024 - Edgerton Makerspace
 Notes:

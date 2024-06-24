@@ -5,6 +5,15 @@
 - Good vid for low power modes: https://www.youtube.com/watch?v=2V2h64cduzE
 - IDD PINS NOT TRUSTWORTHY! IDD pins measured ~15mA while hooking up a current meter in series showed ~175mA consumption for the old code. 
 - My Code: oscillating between 6mA -> 120mA for some reason? but still less than 175mA = hope. picture in phone of graph
+- getting rid of all I2C related code only to use SPI for data comm. Didn't rlly change power consumption from "always on my code" setup
+- the file that is actually being run is the "demo_polling.c" - modify duration of transmission under "discParam.totalDuration        = 0U;" = aka 0ms off
+
+
+TESTED: 
+- Old Code: 175mA
+- My Code (with 1sec turn off/on): 6mA -> 120mA oscillating; prob has to do with Nucleo being powered off every 1 second (red LED on Nucleo blinks!) = hope that low power modes can get us to reduce power?
+- My Code with no turn off (always transmitting): 185mA BUT when the receiving coil is brought into field, current consumption drops to 160mA
+
 
 # 23 June 2024 - Edgerton Makerspace
 - Looking into low power modes and example code stuff

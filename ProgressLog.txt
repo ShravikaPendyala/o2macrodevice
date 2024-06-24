@@ -2,6 +2,7 @@
 - Use nrf52840 chip/breakout board for last data transfer out of the Nucleo to maybe app for a scheduled periodic data transfer using BLE
 - ^ https://www.digikey.com/en/products/detail/nordic-semiconductor-asa/NRF52-DK/5773879?utm_adgroup=&utm_source=google&utm_medium=cpc&utm_campaign=Pmax_Shopping_Boston%20Metro%20Category%20Awareness&utm_term=&utm_content=&utm_id=go_cmp-20837509568_adg-_ad-__dev-c_ext-_prd-5773879_sig-Cj0KCQjwsuSzBhCLARIsAIcdLm7UDqaU0WyxALgY1tEPw8WQZheSsQKdwU77cH-YrnaKeQ1BBDgvPC0aAteCEALw_wcB&gad_source=1&gclid=Cj0KCQjwsuSzBhCLARIsAIcdLm7UDqaU0WyxALgY1tEPw8WQZheSsQKdwU77cH-YrnaKeQ1BBDgvPC0aAteCEALw_wcB
 - Work on testing out low power modes + make sure that there is a decrease in current draw with each change in code
+- Good vid for low power modes: https://www.youtube.com/watch?v=2V2h64cduzE
 
 # 23 June 2024 - Edgerton Makerspace
 - Looking into low power modes and example code stuff

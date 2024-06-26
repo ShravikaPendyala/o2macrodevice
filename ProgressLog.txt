@@ -1,3 +1,6 @@
+# 26 June 2024 - Koch
+- LED on (LD2) on its own is drawing 150-160 mA. Will try low power modes to see wha the lowest in this config is
+
 # 24 June 2024 - Koch
 - Use nrf52840 chip/breakout board for last data transfer out of the Nucleo to maybe app for a scheduled periodic data transfer using BLE
 - ^ https://www.digikey.com/en/products/detail/nordic-semiconductor-asa/NRF52-DK/5773879?utm_adgroup=&utm_source=google&utm_medium=cpc&utm_campaign=Pmax_Shopping_Boston%20Metro%20Category%20Awareness&utm_term=&utm_content=&utm_id=go_cmp-20837509568_adg-_ad-__dev-c_ext-_prd-5773879_sig-Cj0KCQjwsuSzBhCLARIsAIcdLm7UDqaU0WyxALgY1tEPw8WQZheSsQKdwU77cH-YrnaKeQ1BBDgvPC0aAteCEALw_wcB&gad_source=1&gclid=Cj0KCQjwsuSzBhCLARIsAIcdLm7UDqaU0WyxALgY1tEPw8WQZheSsQKdwU77cH-YrnaKeQ1BBDgvPC0aAteCEALw_wcB

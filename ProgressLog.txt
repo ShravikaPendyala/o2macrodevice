@@ -1,3 +1,12 @@
+# 28 June 2024 - Koch
+- Changed clock speed from 48MHz to 4MHz
+- OG code w our antenna = ~285mA (disconnecting NFC board completely = ~160mA
+- OG code w board antenna = ~260mA (245mA when receiving)
+
+- My code w our antenna = ~260mA (no change when receiving)
+- My code w board antenna = ~235mA (218mA when receiving)
+
+
 # 26 June 2024 - Koch
 - LED on (LD2) on its own is drawing 150-160 mA. Will try low power modes to see wha the lowest in this config is
 

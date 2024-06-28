@@ -8,7 +8,7 @@
 
 - Need to look into disabling the automatic antenna tuning (30% decrease in power consumption is expected between board antenna and our antenna, but this didn't happen)
 
-DISABLED AAT: ( i think?: check w LED)
+DISABLED AAT: ( i think?: check w LED) - confirmed with LED-A on NFC
 - My code w our antenna = 255mA (no change when receiving)
 - My code w board antenna = 240mA (218mA when receiving)
 

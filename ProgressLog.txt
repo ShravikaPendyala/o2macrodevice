@@ -8,6 +8,10 @@
 
 - Need to look into disabling the automatic antenna tuning (30% decrease in power consumption is expected between board antenna and our antenna, but this didn't happen)
 
+DISABLED AAT: ( i think?: check w LED)
+- My code w our antenna = 255mA (no change when receiving)
+- My code w board antenna = 240mA (218mA when receiving)
+
 
 # 26 June 2024 - Koch
 - LED on (LD2) on its own is drawing 150-160 mA. Will try low power modes to see wha the lowest in this config is

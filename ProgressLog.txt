@@ -12,6 +12,18 @@ Steps taken:
 ^current power consumption = 286mA w our antenna, no change when receiving
 ^ 279mA w board antenna, 256mA when receiving 
 
+2. Cut down most of the demoCycle() func in ndef_demo.c, all we need is this: 
+"
+void demoCycle( void )
+{
+    rfalNfcWorker();                                    /* Run RFAL worker periodically */
+
+    rfalNfcDiscover( &discParam );
+
+}
+"
+^current power consumption = 290mA w our antenna, 285mA when receiving
+^277mA w board antenna, 254mA when receiving
 
 # 28 June 2024 - Koch
 - Changed clock speed from 48MHz to 4MHz

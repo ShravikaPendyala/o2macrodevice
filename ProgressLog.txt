@@ -1,3 +1,13 @@
+# 30 June 2024 - Koch
+- everything stopped working
+- have to redownload everything and start over
+- From what I recall, here are the main changes that need to be made:
+1. Clock Speed + taking out the code that allows it to transmit out of the while loop (causes transmitter to blink at clock rate)
+2. Turn off all other LEDs
+3. Disable Automatic Antenna Tuning
+4. Mess with NFC stuff so that it isn't modulating the transmitter to find receivers (A, B, F, A2P, etc. types)
+
+
 # 28 June 2024 - Koch
 - Changed clock speed from 48MHz to 4MHz
 - OG code w our antenna = ~285mA (disconnecting NFC board completely = ~160mA

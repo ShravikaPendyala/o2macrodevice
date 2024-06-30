@@ -7,6 +7,11 @@
 3. Disable Automatic Antenna Tuning
 4. Mess with NFC stuff so that it isn't modulating the transmitter to find receivers (A, B, F, A2P, etc. types)
 
+Steps taken:
+1. Make transmit always (code from example = flash transmit => change the duration from 1000U to 0U in demoIni function
+^current power consumption = 286mA w our antenna, no change when receiving
+^ 279mA w board antenna, 256mA when receiving 
+
 
 # 28 June 2024 - Koch
 - Changed clock speed from 48MHz to 4MHz

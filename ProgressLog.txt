@@ -25,6 +25,13 @@ void demoCycle( void )
 ^current power consumption = 290mA w our antenna, 285mA when receiving
 ^277mA w board antenna, 254mA when receiving
 
+3. Reset clock speed to 2MHz!
+^ 273mA, 248mA (receiving) => board antenna
+^276mA our antenna (no change when RX)
+
+4. reduced the "switch" & computing needed
+^267mA our antenna
+
 # 28 June 2024 - Koch
 - Changed clock speed from 48MHz to 4MHz
 - OG code w our antenna = ~285mA (disconnecting NFC board completely = ~160mA

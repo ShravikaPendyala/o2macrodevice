@@ -1,3 +1,10 @@
+# 17 July 2024 - Starbucks
+- Code uploaded marked July 4 = perfect + working
+- Currently working on board layout 
+- NFC board layout completed + made, waiting for parts to come in
+- working on layout for Nucleo so I can make it early next week? schedule stuff with Rodgers for tap access/training
+- Ask about paper/award/conference/etc. ?
+
 # 30 June 2024 - Koch
 - everything stopped working
 - have to redownload everything and start over

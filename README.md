@@ -4,6 +4,9 @@ Anderson Lab @ MIT
 Author: Shravika Pendyala
 When: UROP for Summer of 2024
 
+17 July 2024
+Code form July 4 = Perfect + Working
+
 19 June 2024
 
 Right now, the only code used to upload to the ST Nucleo is main.c located in 

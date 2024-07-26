@@ -20,3 +20,7 @@ Determine what aspects of the Nucleo-L476RG are actually necessary to just power
 INSTRUCTIONS TO DOWNLOAD/SETUP
 1. https://www.st.com/en/embedded-software/x-cube-nfc6.html : Download driver (has example code in it)
 2. Extract the STM32 Folder inside the project you wan't to install. (Not the whole NDEFPolling folder, this will create build errors)
+
+
+BOARDS INFO
+1. In my personal file system, the files are mislabeled BUT the folders in which they are contained are correct. AKA: file "ST25R3911B.pcb" inside ST25R3916B is actually a pcb file with the ST25R3916B chip. 

@@ -23,4 +23,4 @@ INSTRUCTIONS TO DOWNLOAD/SETUP
 
 
 BOARDS INFO
-1. In my personal file system, the files are mislabeled BUT the folders in which they are contained are correct. AKA: file "ST25R3911B.pcb" inside ST25R3916B is actually a pcb file with the ST25R3916B chip. 
+1. In my personal file system, the folders are an accurate representation of the primary chip used in the project

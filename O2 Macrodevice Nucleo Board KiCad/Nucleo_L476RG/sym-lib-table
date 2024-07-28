@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "Header_Connector")(type "KiCad")(uri "C:/Users/pvash/O2 Macrodevice NFC Board KiCad/Header Connectors/2024-07-05_20-54-36.kicad_sym")(options "")(descr ""))
+  (lib (name "Crystal")(type "KiCad")(uri "C:/Users/pvash/O2 Macrodevice Nucleo Board/Crystal_32.768KHz/KiCADv6/2024-07-19_20-06-08.kicad_sym")(options "")(descr ""))
+)

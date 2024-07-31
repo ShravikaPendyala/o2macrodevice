@@ -1,3 +1,14 @@
+# 31 July 2024
+- Code perfectly working + set up with GitHub: ran into issue of where files are, but had to move all drivers/middleware to C:/.
+- Pulsing can be adjusted in the rfalNfcWorker() function in rfal_nfc.c file. set time in ms to be ON and time to be OFF using HAL_Delay
+
+- SetUp: Using ST-Link programmer to upload the code, have the Nucleo + NFC reader hooked up to a benchtop power supply. power is not received from the ST-Link! - - Custon antenna maybe broken? For this setup, using the NFC board antenna with AAT disabled. So, two LEDs on: Blue TX LED + Green PWR LED = ~10mA.
+
+At 20%: 20min ON, 40min OFF
+while ON (not being received) = ~56mA
+while ON (received) = ~47mA
+
+
 # 17 July 2024 - Starbucks
 - Code uploaded marked July 4 = perfect + working
 - Currently working on board layout 

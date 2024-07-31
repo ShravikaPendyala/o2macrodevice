@@ -4,10 +4,54 @@
 
 - SetUp: Using ST-Link programmer to upload the code, have the Nucleo + NFC reader hooked up to a benchtop power supply. power is not received from the ST-Link! - - Custon antenna maybe broken? For this setup, using the NFC board antenna with AAT disabled. So, two LEDs on: Blue TX LED + Green PWR LED = ~10mA.
 
-At 20%: 20min ON, 40min OFF
+~~~ At 20%: 12min ON, 48min OFF ~~~
 while ON (not being received) = ~56mA
 while ON (received) = ~47mA
 while OFF = ~9.6mA (Green PWR LED still ON)
+Power Consumption: 
+3.3V * .047A = .1551W * .2hr = .031Wh = ~31mWh
+3.3V * .0096A = .03168W * .8hr = .0253Wh = ~ 25mWh
+ = 56mWh
+
+Current Consumption: 
+.047A * .2 = 9mAh
+.0096 * .8 = 8mAh
+ = 17mAh
+
+Standard coin cell = 220mAh = 12.9 Hours per coin cell
+
+~~~ At 33%: 20min ON, 40min OFF ~~~
+while ON (not being received) = ~56mA
+while ON (received) = ~47mA
+while OFF = ~9.6mA (Green PWR LED still ON)
+Power Consumption: 
+3.3V * .047A = .1551W * .333hr = .0517Wh = ~52 mWh
+3.3V * .0096A = .03168W * .666hr = .0211Wh = ~ 21 mWh
+ = 73mWh
+
+Current Consumption: 
+.047A * .333 = 16mAh
+.0096 * .666 = 6mAh
+ = 22mAh
+
+Standard coin cell = 220mAh = 10Hours per coin cell
+
+~~~ At 50%: 30min ON, 30min OFF ~~~
+while ON (not being received) = ~56mA
+while ON (received) = ~47mA
+while OFF = ~9.6mA (Green PWR LED still ON)
+Power Consumption: 
+3.3V * .047A = .1551W * .5hr = .0776Wh = ~78 mWh
+3.3V * .0096A = .03168W * .5hr = .0158Wh = ~ 16 mWh
+ = 94mWh
+
+Current Consumption: 
+.047A * .5 = 24mAh
+.0096 * .5 = 5mAh
+ = 29mAh
+
+Standard coin cell = 220mAh = 7.59 Hours per coin cell
+
 
 
 # 17 July 2024 - Starbucks

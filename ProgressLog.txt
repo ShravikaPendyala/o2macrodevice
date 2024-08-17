@@ -1,3 +1,11 @@
+# 17 August 2024
+Making boards
+V1: separate nucleo + separate NFC boards
+V2: Nucleo + NFC on same board (BUT drawing ~60mA when received and 90mA when not received) = "2_Combined"
+V3: Nucleo + NFC on same board with thicker traces + SMA connector soldered onto board = "2_Combined"
+V4: Making new NFC board with SMA connector attached = "3_NFC_Board"
+
+
 # 31 July 2024
 - Code perfectly working + set up with GitHub: ran into issue of where files are, but had to move all drivers/middleware to C:/.
 - Pulsing can be adjusted in the rfalNfcWorker() function in rfal_nfc.c file. set time in ms to be ON and time to be OFF using HAL_Delay

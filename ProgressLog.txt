@@ -4,6 +4,10 @@ Not transmitting: 70mA
 Transmitting (No Receiver): 50mA
 Transmitting (Receiver:  aka LED ON): 40mA
 
+ISSUE: Why is it taking more power when its not transmitting? This matches up with the temperature readings from the IR camera: 
+When not transmitting: 33*C, when transmitting, 29*C
+ST25r3916B chip is getting warmer when not transmitting. Why?
+
 # 17 August 2024
 Making boards
 V1: separate nucleo + separate NFC boards

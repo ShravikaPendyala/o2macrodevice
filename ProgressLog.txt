@@ -1,3 +1,9 @@
+# 23 August 2024
+Power Consumption of my NEW board!!! All working now :)
+Not transmitting: 70mA
+Transmitting (No Receiver): 50mA
+Transmitting (Receiver:  aka LED ON): 40mA
+
 # 17 August 2024
 Making boards
 V1: separate nucleo + separate NFC boards

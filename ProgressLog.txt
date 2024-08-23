@@ -22,6 +22,11 @@ OFF = 6.27mWh
 ADD TO BOARD:
 - 0201 Green LED
 - 3.3 LDO TI
+- Header Pins (Male JST for power and Header pins for uploading code)
+- Safety Switch (Sid will send safety switch part number)
+- Double Sided board
+
+Antenna Inner dimensions: 41.4mm Height, 26mm Width (exact, make sure board is a bit smaller)
 
 # 17 August 2024
 Making boards

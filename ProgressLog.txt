@@ -19,6 +19,10 @@ ON state: 42mA
 ON = 6.93mWh
 OFF = 6.27mWh
 
+ADD TO BOARD:
+- 0201 Green LED
+- 3.3 LDO TI
+
 # 17 August 2024
 Making boards
 V1: separate nucleo + separate NFC boards

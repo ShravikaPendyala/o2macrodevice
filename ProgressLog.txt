@@ -8,6 +8,17 @@ ISSUE: Why is it taking more power when its not transmitting? This matches up wi
 When not transmitting: 33*C, when transmitting, 29*C
 ST25r3916B chip is getting warmer when not transmitting. Why?
 
+RESOLVED: Put the ST25R3916B chip thing into power down mode during the 'off' state, power consumption is now ~2mA during that state (Nucleo + Timer)
+ON state: 42mA
+
+15% Duty Cycle = 9 min ON, 51 min OFF
+3.3V * 2mA = 6.6mW * .85hr = 5.61mWh
+3.3V * 42mA = 138.6 mW * .15hr = 20.8mWh
+
+5% Duty Cycle: (same power calculation as above)
+ON = 6.93mWh
+OFF = 6.27mWh
+
 # 17 August 2024
 Making boards
 V1: separate nucleo + separate NFC boards
